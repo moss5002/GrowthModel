@@ -1,10 +1,10 @@
-ordre,table,regle,justification,lignes_affectees,lignes_avant,lignes_apres
-1,users,Supprimer les copies exactes,Une observation ne doit être comptée qu'une fois. Aucun conflit sur les clés après dédoublonnage.,124,20909,20785
-2,weekly_activity,Supprimer les copies exactes,Une observation ne doit être comptée qu'une fois. Aucun conflit sur les clés après dédoublonnage.,1663,334399,332736
-3,users,Uniformiser les dates d'inscription en AAAA-MM-JJ,"Les dates avec / suivent le format jour/mois/année, confirmé par les jours supérieurs à 12.",311,20785,20785
-4,users,Harmoniser les libellés des variantes push,Les trois libellés correspondent aux variantes décrites dans le data pack.,211,20785,20785
-5,users,Remplacer l'âge absent par inconnu,Conserver les utilisateurs et ne pas inventer leur âge. Les comparaisons par âge présenteront inconnu séparément.,657,20785,20785
-6,weekly_activity,Mettre les durées négatives à manquant,"Garder les sessions, impressions et notifications de la ligne.",95,332736,332736
-7,weekly_activity,Mettre les durées supérieures à 10 080 minutes à manquant,La durée dépasse une semaine entière. Aucun plafonnement ni remplacement par zéro.,100,332736,332736
-8,weekly_activity,Mettre les durées égales à 10 080 minutes à manquant,Sept jours sans pause : durée suspecte écartée par choix méthodologique. Ligne conservée et identifiée par listening_minutes_suspect.,105,332736,332736
-9,marketing_spend,Ajouter mai 2025 : 1 115 EUR estimés,Moyenne des dépenses observées d'avril et juin. Ligne identifiée par spend_is_estimated ; montant non observé.,1,17,18
+order,table,rule,justification,affected_rows,rows_before,rows_after
+1,users,Remove exact duplicates,Each observation must count once. No conflicting keys remain after deduplication.,124,20909,20785
+2,weekly_activity,Remove exact duplicates,Each observation must count once. No conflicting keys remain after deduplication.,1663,334399,332736
+3,users,Standardize signup dates to YYYY-MM-DD,"Dates with / use day/month/year, supported by days above 12.",311,20785,20785
+4,users,Standardize push variant labels,The three labels match the variants described in the data pack.,211,20785,20785
+5,users,Replace missing age with unknown,Keep users without inventing their age. Age comparisons show unknown separately.,657,20785,20785
+6,weekly_activity,Set negative durations to missing,"Retain the sessions, impressions and notifications on the row.",95,332736,332736
+7,weekly_activity,"Set durations above 10,080 minutes to missing",Duration exceeds a full week. No capping or replacement with zero.,100,332736,332736
+8,weekly_activity,"Set durations equal to 10,080 minutes to missing",Seven days without a break: suspicious duration excluded by methodological choice. Row retained and flagged by listening_minutes_suspect.,105,332736,332736
+9,marketing_spend,"Add May 2025: estimated EUR 1,115",Average of observed April and June spend. Row flagged by spend_is_estimated. Amount not observed.,1,17,18

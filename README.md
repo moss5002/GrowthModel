@@ -1,20 +1,20 @@
-# Echo — Groupe 6
+# Echo — Group 6
 
-Projet du cours Growth Modeling & Data-Driven Strategy.
+Project for Growth Modeling & Data-Driven Strategy.
 
 ## Question
 
-Faut-il généraliser les notifications agressives chez Echo ?
+Should Echo roll out aggressive push notifications to everyone?
 
-Echo est une application de podcasts gratuite financée par la publicité.
-Les données couvrent janvier 2025 à juin 2026.
+Echo is a free podcast app funded by advertising.
+The data covers January 2025 to June 2026.
 
-## Livrables
+## Deliverables
 
-À remettre le 9 novembre 2026 à 18 h :
+Due on 9 November 2026 at 6 pm:
 
-- Un modèle de croissance avec un backtest sur 2025 et trois scénarios.
-- Un rapport d'environ quatre pages avec une recommandation, un plan A/B et le journal de nettoyage.
-- Environ dix slides pour une soutenance de huit minutes le 10 novembre, suivie d'une question traitée avec le modèle.
+- A growth model with a 2025 backtest and three scenarios.
+- A report of about four pages with a recommendation, an A/B test plan and the data-cleaning log.
+- About ten slides for an eight-minute defense on 10 November, followed by a question answered using the model.
 
-Les fichiers remis portent le préfixe `G06_Echo_`.
+Submitted filenames start with `G06_Echo_`.

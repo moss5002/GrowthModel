@@ -1,36 +1,36 @@
-# Echo — préparation de l’oral
+# Echo — oral presentation preparation
 
-Les notes de chaque slide contiennent une proposition de présentation. Les durées prévues totalisent huit minutes : 40, 45, 45, 55, 55, 45, 60, 55, 45 et 35 secondes. Répartir les slides entre vous, puis répéter avec un chronomètre.
+Each slide's speaker notes contain a suggested script. The planned durations total eight minutes: 40, 45, 45, 55, 55, 45, 60, 55, 45 and 35 seconds. Divide the slides among you, then rehearse with a timer.
 
-## Les idées à savoir expliquer
+## Ideas you should be able to explain
 
-- **Activation** : vingt minutes cumulées pendant la semaine d’inscription. C’est une convention de première utilisation, pas une preuve de fidélité. Les comparaisons avec dix minutes, deux sessions et leur combinaison ne montrent pas de meilleur retour S4.
-- **Cohorte** : les personnes inscrites pendant la même semaine. S4 est la quatrième semaine après leur semaine d’inscription ; chaque utilisateur compte une seule fois dans le taux de retour de sa cohorte.
-- **Retour S4 ajusté** : on compare les canaux avec une même répartition de mois d’inscription et de plateformes. Cela réduit certaines différences de composition sans prouver un effet causal du canal.
-- **North Star** : les minutes totales d’écoute par semaine. Elles mesurent l’usage audio ; on les accompagne du nombre d’actifs et de la rétention pour éviter qu’une poignée de gros auditeurs masque une perte d’utilisateurs.
-- **Le +30 % annoncé** : notre reconstruction calendaire trouve +31,5 % de sessions totales. La méthode exacte de l’équipe reste inconnue. Sur douze semaines comparables par assigné, les sessions gagnent 8,71 %, mais l’écoute perd 5,25 % et le retour S12 perd 11,71 points.
-- **Deux mois ou douze semaines ?** Les inscriptions au test ont lieu du 15 janvier au 15 mars 2026. Les données jusqu’à juin permettent ensuite douze semaines complètes de suivi pour chaque participant.
-- **CAC et revenu** : pour les inscrits paid de janvier à juin 2025, environ 2,61 € de CAC contre 1,62 € de revenu publicitaire à 52 semaines. Le remboursement moyen n’est pas atteint à cet horizon. Cela ne donne ni une LTV à vie ni un délai certain de remboursement.
-- **Modèle** : actifs suivants = anciens actifs × maintien + nouveaux inscrits, par canal. Paid dépend du budget et du CAC ; les deux autres canaux suivent leurs inscriptions passées. L’effet éventuel de paid sur les autres canaux n’est pas mesuré.
-- **Pourquoi simple ?** Sur la validation interne, le modèle simple donne 1,57 % d’erreur d’écoute contre 2,54 % pour le découpage par ancienneté testé. Sur le backtest final, l’erreur est de 3,85 %. Le modèle sous-estime la fin de période.
-- **Scénarios** : mêmes notifications normales et budget de 1 630 €/mois. Le CAC et la probabilité de départ varient de ±5 %. Ce sont des hypothèses, pas des gains acquis ni des intervalles de confiance.
+- **Activation**: twenty cumulative listening minutes during the signup week. This is a convention for initial usage, not evidence of retention. Comparisons with ten minutes, two sessions and their combination do not show better W4 retention.
+- **Cohort**: people who signed up during the same week. W4 is the fourth week after their signup week. Each user counts once in their cohort's retention rate.
+- **Adjusted W4 retention**: channels are compared using the same distribution of signup months and platforms. This reduces some differences in composition without proving a causal channel effect.
+- **North Star**: total listening minutes per week. This measures audio usage. Active users and retention accompany it so that a few heavy listeners cannot hide user losses.
+- **The claimed +30%**: our calendar reconstruction finds +31.5% total sessions. The team's exact method is unknown. Over twelve comparable weeks per assigned user, sessions rise 8.71%, but listening falls 5.25% and W12 retention falls 11.71 percentage points.
+- **Two months or twelve weeks?** Experiment signups run from 15 January to 15 March 2026. Data through June then provides twelve complete follow-up weeks for every participant.
+- **CAC and revenue**: paid signups from January to June 2025 have about €2.61 CAC versus €1.62 ad revenue at 52 weeks. Mean payback is not reached at this horizon. This gives neither lifetime LTV nor a certain payback date.
+- **Model**: next active users = existing active users × continuation rate + new signups, by channel. Paid depends on budget and CAC. Other channels follow their past signups. Any paid effect on the other channels is unmeasured.
+- **Why simple?** Internal validation gives 1.57% listening error for the simple model, versus 2.54% for the tested age bands. Final backtest error is 3.85%. The model underestimates the end of the period.
+- **Scenarios**: all keep normal notifications and a €1,630 monthly budget. CAC and churn probability vary by ±5%. These are assumptions, not achieved gains or confidence intervals.
 
-## Utiliser le modèle pour la question du jury
+## Using the model for the jury's question
 
-Avant l’oral, ouvrir `G06_Echo_model.ipynb` depuis la racine du projet et exécuter toutes les cellules avec les dépendances de `requirements.txt`. Vérifier que les graphiques apparaissent. Garder une copie inchangée pour retrouver les résultats du rendu.
+Before the defense, open `G06_Echo_model.ipynb` from the project root and run all cells with the dependencies in `requirements.txt`. Check that charts appear. Keep an unchanged copy to recover the submitted results.
 
-La section des scénarios contient trois réglages :
+The scenario section has three settings:
 
-| Réglage | Valeur du rendu | Utilité |
+| Setting | Submitted value | Purpose |
 | --- | --- | --- |
-| `BUDGET_PAID_MONTHLY` | 1630 | Budget paid mensuel en euros |
-| `SCENARIO_CHANGE` | 0.05 | Variation relative du CAC et des départs |
-| `FORECAST_WEEKS` | 26 | Nombre de semaines projetées |
+| `BUDGET_PAID_MONTHLY` | 1630 | Monthly paid budget in euros |
+| `SCENARIO_CHANGE` | 0.05 | Relative change in CAC and churn |
+| `FORECAST_WEEKS` | 26 | Number of forecast weeks |
 
-Modifier un réglage puis relancer les cellules des paramètres, des résultats et du graphique des scénarios. Exemple : pour +20 % de budget, remplacer 1630 par 1956. Les inscriptions paid augmentent dans le modèle ; cela ne prouve pas qu’un budget plus élevé conserverait le même CAC dans la réalité. Les autres canaux ne reçoivent pas de hausse automatique.
+Change a setting, then rerun the scenario parameter, results and chart cells. For example, a 20% budget increase changes 1630 to 1956. Paid signups increase in the model. This does not prove a higher budget would preserve the same CAC in reality. Other channels receive no automatic increase.
 
-Lire les actifs de dernière semaine, les minutes cumulées, le revenu publicitaire et la dépense paid. Ne pas appeler « bénéfice » le revenu moins la seule dépense paid : les autres coûts manquent. Revenir aux réglages du rendu après la démonstration.
+Read last-week active users, cumulative minutes, ad revenue and paid spend. Do not call revenue minus paid spend “profit”: other costs are missing. Restore the submitted settings after the demonstration.
 
-## Ce qui reste avant le dépôt
+## Before submission
 
-Relire les trois rendus en groupe, vérifier les éventuelles exigences de langue et ajouter vos noms si nécessaire. Répéter les huit minutes et la modification d’un paramètre. Déposer le notebook, le rapport PDF et les slides avec les données nécessaires à l’exécution, selon le canal demandé par l’enseignante.
+Review the three deliverables together, check any language requirements and add your names if needed. Rehearse the eight-minute presentation and a parameter change. Submit the notebook, PDF report and slides with the data required to run the model, through the channel specified by the instructor.
