@@ -15,6 +15,19 @@ Each slide's speaker notes contain a suggested script. The planned durations tot
 - **Why simple?** Internal validation gives 1.57% listening error for the simple model, versus 2.54% for the tested age bands. Final backtest error is 3.85%. The model underestimates the end of the period.
 - **Scenarios**: all keep normal notifications and a €1,630 monthly budget. CAC and churn probability vary by ±5%. These are assumptions, not achieved gains or confidence intervals.
 
+## Our notebook and the course simulator
+
+Both use the same growth logic: retain existing users, add new users, then estimate revenue. The supplied Excel file illustrates this with monthly inputs. Our calculations run in the notebook, using Echo's historical data and explicit forecast assumptions.
+
+| Aspect | Course simulator | Our notebook |
+| --- | --- | --- |
+| Time and channels | Monthly model with overall inputs | Weekly cohorts, with parameters by acquisition channel |
+| Acquisition | Paid budget / CAC and a referral assumption | Paid budget / CAC; historical signup trends for organic and podcast |
+| Revenue | ARPU and gross margin assumptions | Ad impressions and the supplied approximate €9 CPM; no invented margin |
+| Validation | Teaching examples and scenario comparisons | Historical calibration, internal validation and a held-out 2025 backtest |
+
+The notebook also contains data cleaning, the funnel and the notification experiment. We did not fill in the Excel simulator. We adapted its growth principles to Echo. Code cells are collapsed for reading; expand a cell to inspect or edit its code. All calculations and outputs are retained.
+
 ## Using the model for the jury's question
 
 Before the defense, open `G06_Echo_model.ipynb` from the project root and run all cells with the dependencies in `requirements.txt`. Check that charts appear. Keep an unchanged copy to recover the submitted results.
