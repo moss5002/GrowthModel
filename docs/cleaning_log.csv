@@ -6,4 +6,5 @@ ordre,table,regle,justification,lignes_affectees,lignes_avant,lignes_apres
 5,users,Remplacer l'âge absent par inconnu,Conserver les utilisateurs et ne pas inventer leur âge. Les comparaisons par âge présenteront inconnu séparément.,657,20785,20785
 6,weekly_activity,Mettre les durées négatives à manquant,"Garder les sessions, impressions et notifications de la ligne.",95,332736,332736
 7,weekly_activity,Mettre les durées supérieures à 10 080 minutes à manquant,La durée dépasse une semaine entière. Aucun plafonnement ni remplacement par zéro.,100,332736,332736
-8,marketing_spend,Ajouter mai 2025 : 1 115 EUR estimés,Moyenne des dépenses observées d'avril et juin. Ligne identifiée par spend_is_estimated ; montant non observé.,1,17,18
+8,weekly_activity,Mettre les durées égales à 10 080 minutes à manquant,Sept jours sans pause : durée suspecte écartée par choix méthodologique. Ligne conservée et identifiée par listening_minutes_suspect.,105,332736,332736
+9,marketing_spend,Ajouter mai 2025 : 1 115 EUR estimés,Moyenne des dépenses observées d'avril et juin. Ligne identifiée par spend_is_estimated ; montant non observé.,1,17,18
